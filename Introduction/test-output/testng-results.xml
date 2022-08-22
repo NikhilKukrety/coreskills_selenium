@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-21T17:34:23 IST" name="Default suite" finished-at="2022-08-21T17:34:23 IST" duration-ms="127">
+    <groups>
+    </groups>
+    <test started-at="2022-08-21T17:34:23 IST" name="Default test" finished-at="2022-08-21T17:34:23 IST" duration-ms="127">
+      <class name="JavaStreams">
+        <test-method signature="regular()[pri:0, instance:JavaStreams@1de5f259]" started-at="2022-08-21T17:34:23 IST" name="regular" finished-at="2022-08-21T17:34:23 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regular -->
+        <test-method signature="streamCollect()[pri:0, instance:JavaStreams@1de5f259]" started-at="2022-08-21T17:34:23 IST" name="streamCollect" finished-at="2022-08-21T17:34:23 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- streamCollect -->
+        <test-method signature="streamFilter()[pri:0, instance:JavaStreams@1de5f259]" started-at="2022-08-21T17:34:23 IST" name="streamFilter" finished-at="2022-08-21T17:34:23 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- streamFilter -->
+        <test-method signature="streamMap()[pri:0, instance:JavaStreams@1de5f259]" started-at="2022-08-21T17:34:23 IST" name="streamMap" finished-at="2022-08-21T17:34:23 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- streamMap -->
+      </class> <!-- JavaStreams -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
