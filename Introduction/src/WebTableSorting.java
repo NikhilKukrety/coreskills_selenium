@@ -30,7 +30,7 @@ public class WebTableSorting {
 		//Grabbing the contents:
 		List<WebElement> elementsList = driver.findElements(By.xpath("//tr/td[1]"));
 		
-		//Using streams, we will get them and sort them aand get the list (original):
+		//Using streams, we will get them and sort them and get the list (original):
 		List<String> originalList = elementsList.stream().map(s->s.getText()).collect(Collectors.toList());
 	
 		//Printing the new List:
