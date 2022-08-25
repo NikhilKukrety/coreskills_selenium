@@ -1,15 +1,20 @@
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class MultipleWindows {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\ChromeDriver\\ChromeDriver.exe");
@@ -53,8 +58,23 @@ public class MultipleWindows {
 		driver.switchTo().window(parentWindow);
 		
 		//Finally, entering the first course name on the "Name" field:
-		driver.findElement(By.cssSelector("[name='name']")).sendKeys(courseName);
+		WebElement name = driver.findElement(By.cssSelector("[name='name']"));
+		name.sendKeys(courseName);
 		
+		//Now, I want to take the SCREENSHOT of the element so that we can check if entered text is correct or not.
+		//This is also called as "PARTIAL SCREENSHOT"
+		//So, we will use below method:
+		File file = name.getScreenshotAs(OutputType.FILE);
+		
+		//Now, using the object "file" getting the physical file:
+		/*ALSO, to convert file object to physical file, we need to import a JAR for fileUtils class:
+		 * google search - apache commons fileutils maven and download the jar common-io-2.6:
+		*/
+		
+		//Converting file object to physical file
+		FileUtils.copyFile(file, new File("CourseNameCaptured.png")); //Now, only the screenshot of "Name" edit box will be saved
+		
+		//NOW, REFRESH THE PROJECT AND WE WILL SEE THE PNG FILE.
 		
 	}
 
