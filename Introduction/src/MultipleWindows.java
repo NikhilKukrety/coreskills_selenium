@@ -76,6 +76,12 @@ public class MultipleWindows {
 		
 		//NOW, REFRESH THE PROJECT AND WE WILL SEE THE PNG FILE.
 		
+		//HOW TO GET HEIGHT AND WIDTH OF AN ELEMENT (say of fieldname element):
+		System.out.println(name.getRect().getDimension().getHeight()); //To get height of the element  
+		
+		System.out.println(name.getRect().getDimension().getWidth()); //To get width of the element
+		
+		
 	}
 
 }
