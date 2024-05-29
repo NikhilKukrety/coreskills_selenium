@@ -13,7 +13,7 @@ window.onload = function () {
     if (cookieValue[1] === 'Switch Ultra Theme' ||
         localStorage.getItem('Theme') === 'Switch Ultra Theme') {
       document.getElementById('button').innerText = "Switch Retro Theme";
-      document.getElementById('retro').setAttribute('disabled', 'false');
+      document.getElementById('retro').setAttribute('disabled', 'false'); 
 
       document.getElementById('button').innerText = "Switch Ultra Theme";
       document.getElementById('retro').removeAttribute('disabled');
